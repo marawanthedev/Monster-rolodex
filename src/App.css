@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -13,26 +14,31 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.appHeader {
+  font-size: 3rem;
   color: white;
+  font-family: "Bigelow Rules", cursive;
+  position: relative;
+}
+.appHeader::after,
+.appHeader::before {
+  content: "";
+  position: absolute;
+  width: 10rem;
+  border-radius: 5px;
+  z-index: -1;
+  top: 0;
+  height: 100%;
+}
+.appHeader::after {
+  background-color: rgb(122, 48, 156);
+  left: 38.75rem;
+}
+.appHeader::before {
+  background-color: rgb(79, 165, 139);
+  right: 38.75rem;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  padding-bottom: 5rem;
 }
